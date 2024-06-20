@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(234, 235, 144);
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.first {
+  color: red;
+}
+
+#your-name {
+  background-color: azure;
+  border: 5px solid #444;
+}
+
+/* the font family property is a property that gets inheritedm, so all the elements inside the body (child elements) like h1, p,etc will also get the arial font  
+-most properties are not inherited; but those that make sense are 
+
+-we can use the ids, classnames to select and style elements
+
+-for classnames we use "." which is called the dot selector to select a class 
+
+-for ids, we use "#". 
+
+-border is a shorthand property where we can specify multiple aspects of the border, the line thickness, color, etc. 
+
+
+
+
+*/
+
+/* 
+--------------------------------------------------------------
+
+Introduction to the CSS Box Model 
+
+-one of the most fundamental parts of CSS 
+-main factor that defines how elements are displayed on a webpage and how they are sized 
+-accord to the BM each element on web page can be seen as a box, with specifications for padding width height border and margins (they are all optional)
+
+-content: holds text, images, etc, can define height/width w/corresponding CSS properties 
+-padding: transparent area around the content and inside of the box; can be used to add whitespace; padding property inside css
+-Border: goes around the padding and the content 
+-Margin: space between boxes; space between two elements basically 
+-there is also something called the fill area: area that gets filled with background color of background image ; includes padding and border but not the margin 
+
+-global reset: to do this we need to reset all of the elements; use the star * and this selects all the elements; 
+set all margins, padding to 0 and box-sizing to border box; 
+
+-MAKE SURE TO add the reset information- go back to around 10 min mark and take notes on that but rest just listening to 
+
+*/

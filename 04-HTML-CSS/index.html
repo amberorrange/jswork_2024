@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="csspractice.css" rel="stylesheet" />
+
+    <title>Learning HTML and CSS</title>
+  </head>
+
+  <body>
+    <h1>JavaScript is fun and CSS and HTML too!</h1>
+
+    <p class="first">
+      You can learn JS without HTML and Css but it's better to know them for dom
+      manipulation. You can go to my site
+      <a href="https://www.amberorrange.me">here.</a>
+    </p>
+
+    <p class="second">Paragraph 2</p>
+
+    <img
+      id="course-image"
+      src="https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?cs=srgb&dl=pexels-pixabay-358042.jpg&fm=jpg"
+    />
+
+    <form id="your-name">
+      <h2>Your name here</h2>
+      <p class="first">please fill in this form:</p>
+      <input type="text" placeholder="Your name" />
+      <button>Okay!</button>
+    </form>
+  </body>
+</html>
+
+<!-- 
+  -inline vs block elements: inline happens on the same line currently on (example <a> tag)
+  -block elements will start a new line (ex h1 element)
+Ex: href is an attribute that describes what the link is for the anchor tag  
+      <a href="https://www/amberorrange.me">This goes to my site.</a>
+Another example is an img tag that uses the src attribute so it knows what source to get the image from 
+          <img
+      src="https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?cs=srgb&dl=pexels-pixabay-358042.jpg&fm=jpg"/>
+You'll notice no closing tag on img bc there's nothing that actually goes in between two tags for an image 
+-diff elements will have diff atributes that make sense for them 
+-there are two attributes that we can use on ALL elements that we can use to identify them: classes and ids-used to name elements so that we can select them in css and style them; also used to select elements in js for dom manipulation, especially classes
+-classes: can be added inside the tag itself
+ex:     <p class="first"> This is the text </p>
+
+-ids: diff between classes and ids is that ids have to be unique!!!! and classes do not; in practice, we almost never use ids to style elements or select them from js. its better practice to use classes
+
+ex:  <img id="course-image"
+      src="https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?cs=srgb&dl=pexels-pixabay-358042.jpg&fm=jpg"/>
+
+-idea of creating creating boxes: aka div. can make boxes or divs
+-id/class names: to separate words with a dash is conventional syntax bc this is the way css does it 
+
+-some elements are better to use in certain use cases over div element: for example the form element 
+
+   <form id="your-name">
+      <h2>Your name here</h2>
+      <p>please fill in this form:</p>
+      <input type="text" placeholder="Your name" />
+      <button>Okay!</button>
+    </form>
+
+    -its important for semantic html 
+
+----------------------------------------------------------
+
+
+
+ -->
+
+<!-- Basic styling with CSS:
+-we use CSS to style elements and create the layout for theoverall page
+-can use the style element inside html file inside of the head element
+-inside the style element you can use different selectors
+-for example you can use an element selector to select all elements of a certain type, for example you can select the whole body; then inside the selector, use curly braces to add CSS declarations; 
+
+  <style>
+      body {
+        background-color: green;
+      }
+    </style>
+
+-CSS declarations consist of a property name and then a value; so background-color: property name and value is green;
+  
+-it is better practice to create a separate CSS file (like style.css) and link it to the html file 
+
+-you can use the link element to connet to a separate css file. again use the href attribute to add the name of the file (relative location of the files being connected is also important)
+
+    <link href="csspractice.css" rel="stylesheet" />
+     
+
+
+
+
+
+-->
