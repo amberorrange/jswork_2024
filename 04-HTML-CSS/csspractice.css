@@ -2,6 +2,7 @@ body {
   background-color: rgb(234, 235, 144);
   font-family: Arial;
   font-size: 20px;
+  padding: 50px;
 }
 
 .first {
@@ -11,9 +12,16 @@ body {
 #your-name {
   background-color: azure;
   border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
 }
 
-/* the font family property is a property that gets inheritedm, so all the elements inside the body (child elements) like h1, p,etc will also get the arial font  
+h1 {
+  padding-bottom: 25px;
+}
+
+/* the font family property is a property that gets inherited, so all the elements inside the body (child elements) like h1, p,etc will also get the arial font  
 -most properties are not inherited; but those that make sense are 
 
 -we can use the ids, classnames to select and style elements
@@ -22,8 +30,19 @@ body {
 
 -for ids, we use "#". 
 
--border is a shorthand property where we can specify multiple aspects of the border, the line thickness, color, etc. 
+.first {
+  color: red;
+}
 
+#your-name {
+  background-color: azure;
+  border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+-border is a shorthand property where we can specify multiple aspects of the border, the line thickness, color, etc. 
 
 
 
@@ -36,7 +55,7 @@ Introduction to the CSS Box Model
 
 -one of the most fundamental parts of CSS 
 -main factor that defines how elements are displayed on a webpage and how they are sized 
--accord to the BM each element on web page can be seen as a box, with specifications for padding width height border and margins (they are all optional)
+-according to the BM each element on web page can be seen as a box, with specifications for padding width height border and margins (they are all optionala, can be boxes with no margin, padding, border, etc)
 
 -content: holds text, images, etc, can define height/width w/corresponding CSS properties 
 -padding: transparent area around the content and inside of the box; can be used to add whitespace; padding property inside css
@@ -44,9 +63,73 @@ Introduction to the CSS Box Model
 -Margin: space between boxes; space between two elements basically 
 -there is also something called the fill area: area that gets filled with background color of background image ; includes padding and border but not the margin 
 
--global reset: to do this we need to reset all of the elements; use the star * and this selects all the elements; 
-set all margins, padding to 0 and box-sizing to border box; 
+-by default some elements get some margin (this could apply to other parts of the BM) automaticallly when we don't define them, this can be a problem when styling a page - usually what we do is reset all the padding and all of the margins on all elements before doing anything else- this is called a global reset 
 
--MAKE SURE TO add the reset information- go back to around 10 min mark and take notes on that but rest just listening to 
+-global reset: to do this we use the * (star) selector to select all elements on the page; 
+set all margins and padding to 0; we also set box-sizing to border box but didn't go into detail- includes padding and borders into the width/height that we specify for an element; 
 
-k*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+-press F4 or inspect to and go to Elements tab and you can see the box model for all the elements on your page 
+
+-you can also select elements like input and button and style them:
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+-one final and important selector: the child selector; we will use this all the time to select elements for dom manipulation; the selectors will work the same as when we select in js; this means you can select an element (or any other selector) that is 'inside an element with a specific classname or id
+
+#your-name h2 {
+  color: olivedrab;
+}
+
+-The above means all h2 elements inside elements with the class 'your-name' will turn to the color olivedrab 
+
+-can also style images: set width/height, borders, etc: 
+
+#course-image {
+  width: 200px;
+  height: 200px;
+}
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}
+
+#course-image {
+  width: 200px;
+  height: 200px;
+}
